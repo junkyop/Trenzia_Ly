@@ -9,8 +9,7 @@ import time
 # For deployment, ALWAYS use Streamlit Secrets to secure your API key:
 # st.secrets["GOOGLE_API_KEY"]
 # For local testing, you can temporarily use your key directly, but remove before sharing/deploying.
-API_KEY = "AIzaSyAF2yU1mvJz262T02gkXR2H7Lom72Z5tY8" # <<< IMPORTANT: REPLACE WITH YOUR ACTUAL GOOGLE GEMINI API KEY
-
+API_KEY = st.secrets["GOOGLE_API_KEY"]
 if API_KEY == "YOUR_GEMINI_API_KEY" or not API_KEY:
     st.error("❌ Google Gemini API Key Missing!")
     st.error("Please enter your actual Google Gemini API key in the 'API_KEY' variable or use Streamlit Secrets.")
